@@ -1,0 +1,298 @@
+/* =========================================
+   ESTILOS GENERALES
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #07111f, #102a43, #07111f);
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.icono {
+    font-size: 55px;
+    margin-bottom: 5px;
+}
+
+.header h1 {
+    margin: 5px 0;
+    font-size: 36px;
+}
+
+.header h2 {
+    margin: 5px 0 15px;
+    font-size: 24px;
+    color: #38bdf8;
+}
+
+.header p {
+    max-width: 700px;
+    margin: auto;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   ESTADO DEL MODELO
+   ========================================= */
+
+.status {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    color: #bae6fd;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+.card {
+    background: rgba(15, 23, 42, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
+.texto {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+input[type="file"] {
+    display: none;
+}
+
+.btn {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-select {
+    background: #0284c7;
+    color: white;
+}
+
+.btn-select:hover {
+    background: #0369a1;
+}
+
+.btn-analyze {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-analyze:hover {
+    background: #15803d;
+}
+
+.btn-analyze:disabled {
+    background: #475569;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   VISTA PREVIA DE LA IMAGEN
+   ========================================= */
+
+.preview-area {
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: #020617;
+    border: 2px dashed #334155;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+#placeholder {
+    text-align: center;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+#previewImage {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   RESULTADO PRINCIPAL
+   ========================================= */
+
+.resultado-principal {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.resultado-principal p {
+    color: #94a3b8;
+    margin: 0 0 10px;
+}
+
+#predicted {
+    font-size: 28px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   RESULTADOS Y PORCENTAJES
+   ========================================= */
+
+.results-list {
+    margin-top: 15px;
+}
+
+.sin-resultados {
+    color: #64748b;
+    text-align: center;
+}
+
+.result-item {
+    margin-bottom: 18px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.class-name {
+    font-weight: bold;
+}
+
+.score {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   BARRAS DE PORCENTAJE
+   ========================================= */
+
+.bar {
+    width: 100%;
+    height: 15px;
+    background: #1e293b;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #0284c7, #38bdf8);
+    border-radius: 20px;
+    transition: width 0.8s;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .preview-area {
+        height: 250px;
+    }
+}

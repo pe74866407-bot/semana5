@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clasificador de Celulares y Tablets</title>
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- =====================================
+             ENCABEZADO
+             ===================================== -->
+
+        <header class="header">
+
+            <div class="icono">
+                📱
+            </div>
+
+            <h1>
+                Clasificador Inteligente
+            </h1>
+
+            <h2>
+                Celulares y Tablets
+            </h2>
+
+            <p>
+                Sistema de inteligencia artificial que permite
+                identificar si una imagen corresponde a un celular
+                o a una tablet.
+            </p>
+
+        </header>
+
+
+        <!-- =====================================
+             ESTADO DEL MODELO
+             ===================================== -->
+
+        <div id="status" class="status">
+
+            ⏳ Cargando modelo de inteligencia artificial...
+
+        </div>
+
+
+        <!-- =====================================
+             CONTENIDO PRINCIPAL
+             ===================================== -->
+
+        <main class="contenido">
+
+
+            <!-- =================================
+                 SECCIÓN PARA IMAGEN
+                 ================================= -->
+
+            <section class="card">
+
+                <h2>
+                    📷 Seleccionar imagen
+                </h2>
+
+
+                <p class="texto">
+
+                    Selecciona una imagen de un celular
+                    o una tablet para que la inteligencia
+                    artificial pueda analizarla.
+
+                </p>
+
+
+                <!-- Input para seleccionar archivo -->
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                >
+
+
+                <!-- Botón seleccionar -->
+
+                <button
+                    id="selectButton"
+                    class="btn btn-select">
+
+                    📁 Seleccionar imagen
+
+                </button>
+
+
+                <!-- =================================
+                     VISTA PREVIA
+                     ================================= -->
+
+                <div class="preview-area">
+
+
+                    <div id="placeholder">
+
+                        📷
+                        <br>
+
+                        No has seleccionado ninguna imagen
+
+                    </div>
+
+
+                    <img
+                        id="previewImage"
+                        alt="Vista previa de la imagen"
+                    >
+
+
+                </div>
+
+
+                <!-- =================================
+                     BOTÓN ANALIZAR
+                     ================================= -->
+
+                <button
+                    id="analyzeButton"
+                    class="btn btn-analyze"
+                    disabled>
+
+                    🔍 Analizar imagen
+
+                </button>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 RESULTADOS
+                 ================================= -->
+
+            <section class="card resultados">
+
+
+                <h2>
+                    🤖 Resultado de la IA
+                </h2>
+
+
+                <div class="resultado-principal">
+
+                    <p>
+                        Dispositivo reconocido:
+                    </p>
+
+
+                    <div id="predicted">
+
+                        Esperando imagen...
+
+                    </div>
+
+                </div>
+
+
+                <h3>
+                    Porcentaje de confianza
+                </h3>
+
+
+                <div
+                    id="resultsList"
+                    class="results-list">
+
+                    <p class="sin-resultados">
+
+                        Los resultados aparecerán aquí.
+
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- =====================================
+             PIE DE PÁGINA
+             ===================================== -->
+
+        <footer>
+
+            <p>
+                Proyecto universitario de Inteligencia Artificial
+            </p>
+
+            <p>
+                Modelo entrenado con Teachable Machine
+            </p>
+
+        </footer>
+
+
+    </div>
+
+
+    <!-- =====================================
+         TENSORFLOW.JS
+         ===================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0/dist/tf.min.js">
+    </script>
+
+
+    <!-- =====================================
+         TEACHABLE MACHINE IMAGE LIBRARY
+         ===================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js">
+    </script>
+
+
+    <!-- =====================================
+         NUESTRO JAVASCRIPT
+         ===================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
